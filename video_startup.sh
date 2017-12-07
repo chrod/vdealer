@@ -23,8 +23,7 @@ echo "vdealer: Video devices started."
 
 # Video 5&6: dupe of video1 (video7 reserved for dev)
 echo "vdealer: ffmpeg starting streaming duplication"
-#ffmpeg -f v4l2 -i /dev/video1 -f v4l2 /dev/video5 -f v4l2 /dev/video6 > output.log 2>&1 &
-ffmpeg -f v4l2 -i /dev/video1 -f v4l2 /dev/video5 -f v4l2 /dev/video6
+ffmpeg -f v4l2 -i /dev/video1 -f v4l2 /dev/video5 -f v4l2 /dev/video6 > output.log 2>&1 &
 
 # Just a loop to keep the container running
 while true; do :; done
